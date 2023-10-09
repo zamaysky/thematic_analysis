@@ -26,9 +26,8 @@ class BaseThemes(BaseModel):
 
 
 class ThematicTextRequest(BaseModel):
-    text: str
+    text: str = Field(min_length=1, max_length=5000)
 
 
-class ThematicTextResponse(BaseModel):
-    text: str
+class ThematicTextResponse(ThematicTextRequest):
     themes: list[str] = []
