@@ -1,0 +1,20 @@
+services:
+  thematic_analysis_backend:
+    platform: linux/amd64
+    container_name: thematic_analysis_backend
+    build:
+      dockerfile: dockerfile
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Europe/Moscow
+    restart: always
+
+  thematic_analysis_nginx:
+    image: nginx:1.25.2-alpine
+    container_name: thematic_analysis_nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - 80:80
+    depends_on:
+      - thematic_analysis_backend
