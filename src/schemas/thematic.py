@@ -1,6 +1,6 @@
 from typing import Any, Counter, Iterator
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from functools import cached_property
 
 from utils.text_utils import words_counter
