@@ -31,3 +31,8 @@ curl --location 'localhost/v1/thematic/text' \
     "text": "кухня fdsadfadsdf тайская asdfads"
 }'
 ```
+
+Базовый набор тем + формулировок находится в файле:
+```
+./src/base_theme_phrases.json
+```
