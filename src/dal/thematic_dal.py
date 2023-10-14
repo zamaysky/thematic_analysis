@@ -1,3 +1,5 @@
+from typing import NoReturn
+
 from elastic_transport import ObjectApiResponse
 from elasticsearch import AsyncElasticsearch
 from more_itertools import map_reduce
@@ -8,10 +10,10 @@ from schemas.thematic_schemas import ThemePhrase, BaseThemes, BaseThemePhrases
 class ThematicDal:
     INDEX_NAME = 'themes'
 
-    def __init__(self, es: AsyncElasticsearch):
+    def __init__(self, es: AsyncElasticsearch) -> NoReturn:
         self._es = es
 
-    async def index_theme_phrase(self, theme_phrase: ThemePhrase):
+    async def index_theme_phrase(self, theme_phrase: ThemePhrase) -> NoReturn:
         await self._es.index(
             index=self.INDEX_NAME,
             body=theme_phrase.model_dump(),

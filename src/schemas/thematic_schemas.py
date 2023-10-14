@@ -27,5 +27,10 @@ class ThematicTextRequest(BaseModel):
     text: str = Field(min_length=1, max_length=5000)
 
 
+class ThemeResponseItem(BaseModel):
+    title: str
+    matched_phrase: str
+
+
 class ThematicTextResponse(ThematicTextRequest):
-    themes: list[BaseThemePhrases] = []
+    themes: list[ThemeResponseItem] = []
