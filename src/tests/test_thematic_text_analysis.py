@@ -1,4 +1,4 @@
-from schemas.thematic import BaseThemes, ThematicTextRequest, ThematicTextResponse
+from schemas.thematic_schemas import BaseThemes, ThematicTextRequest, ThematicTextResponse
 from client import Client
 
 
