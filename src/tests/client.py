@@ -3,7 +3,7 @@ from httpx import Response
 from starlette import status
 
 from main import app
-from schemas.thematic import BaseThemes, ThematicTextResponse, ThematicTextRequest
+from schemas.thematic_schemas import BaseThemes, ThematicTextResponse, ThematicTextRequest
 
 
 class Client:

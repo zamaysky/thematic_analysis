@@ -6,6 +6,7 @@
 
 - python3.11.2 + fastapi
 - NGINX 1.25.2
+- elasticsearch 7.17.13
 
 Запустить проект:
 
