@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from routs.themalic_router import router as thematic_router
+from routes.themalic_router import router as thematic_router
 
 app = FastAPI(title="ThematicAPI", version="1.0", openapi_url="/openapi.json", docs_url="/docs")
 
